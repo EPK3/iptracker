@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;900&family=Roboto:wght@300;900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
     integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
@@ -19,7 +22,29 @@
         <h1>IP Address Tracker</h1>
         <div class="searchBox">
             <input type="text" placeholder="Search any IP Address or Domain"/>
-            <button type="submit"><i class="fa fa-arrow-circle-right" style="font-size:24px; color: #ffffff"></i></button>
+            <button type="submit"><i class="fa fa-arrow-circle-right" style="font-size:24px; color: #487F91"></i></button>
+        </div>
+        <div class="break"></div>
+        <div class="ipInfo">
+            <div class="square">
+                <h2>IP Address</h2>
+                <p>1.1.1.1</p>
+            </div>
+            <div class="column-break"></div>
+            <div class="square">
+                <h2>Location</h2>
+                <p>New York, NY</p>
+            </div>
+            <div class="column-break"></div>
+            <div class="square">
+                <h2>Timezone</h2>
+                <p>UTC-5:00</p>
+            </div>
+            <div class="column-break"></div>
+            <div class="square">
+                <h2>ISP</h2>
+                <p>Verizon</p>
+            </div>
         </div>
     </div>
     <div id="map"></div>
