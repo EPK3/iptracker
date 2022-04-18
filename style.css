@@ -51,6 +51,10 @@ input {
     border: none;
 }
 
+input:focus {
+    outline: none;
+}
+
 button {
     width: 40px;
     border-radius: 0px 5px 5px 0px;

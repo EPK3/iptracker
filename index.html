@@ -21,33 +21,34 @@
     <div class="banner">
         <h1>IP Address Tracker</h1>
         <div class="searchBox">
-            <input type="text" placeholder="Search any IP Address or Domain"/>
-            <button type="submit"><i class="fa fa-arrow-circle-right" style="font-size:24px; color: #487F91"></i></button>
+            <input id="search" type="text" placeholder="Search any IP Address or Domain"/>
+            <button onClick="searchInput()" id="searchButton" type="submit"><i class="fa fa-arrow-circle-right" style="font-size:24px; color: #487F91"></i></button>
         </div>
         <div class="break"></div>
         <div class="ipInfo">
             <div class="square">
                 <h2>IP Address</h2>
-                <p>1.1.1.1</p>
+                <p id="currentIpAddress">1.1.1.1</p>
             </div>
             <div class="column-break"></div>
             <div class="square">
                 <h2>Location</h2>
-                <p>New York, NY</p>
+                <p id="currentLocation">New York, NY</p>
             </div>
             <div class="column-break"></div>
             <div class="square">
                 <h2>Timezone</h2>
-                <p>UTC-5:00</p>
+                <p id="currentTimezone">UTC-5:00</p>
             </div>
             <div class="column-break"></div>
             <div class="square">
                 <h2>ISP</h2>
-                <p>Verizon</p>
+                <p id="currentISP">Verizon</p>
             </div>
         </div>
     </div>
     <div id="map"></div>
     <script src="map.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
