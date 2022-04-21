@@ -2,6 +2,21 @@
     margin: 0 auto;
     font-family: 'Roboto', sans-serif;
 }
+
+.warning {
+    background-color: #eb0a0a;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+}
+
+.warning p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: center;
+}
+
 .banner {
     background: url(./img/ip-banner.webp) no-repeat center top;
     background-size: cover;
@@ -19,7 +34,7 @@ h1 {
     font-weight: 900;
     color: #ffffff;
     text-shadow: 2px 2px 2px #858585;
-    padding-top: 20px;
+    padding-top: 50px;
 }
 
 h2 {
@@ -33,6 +48,7 @@ p {
     font-family: 'M PLUS Rounded 1c', sans-serif;
     font-size: 28px;
     font-weight: 500;
+    margin: 10px;
     margin-top: 20px;
 }
 
@@ -82,7 +98,7 @@ button {
     background-color: #ffffff;
     border-radius: 5px;
     min-height: 150px;
-    margin-top: 50px;
+    margin-top: 20px;
     box-shadow: 1px 1px 1px 1px #858585;
 }
 
@@ -96,4 +112,20 @@ button {
     min-width: 250px;
     min-height: 150px;
     text-align: center;
+}
+
+@media only screen and (max-width: 1280px) {
+    .banner {
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 810px) {
+    .column-break {
+        border: none;
+    }
+
+    input {
+        width: 250px;
+    }
 }
