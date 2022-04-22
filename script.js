@@ -1,7 +1,4 @@
 const input = document.getElementById("search");
-let currentLat;
-let currentLon;
-
 
 var map = L.map('map').setView([39.03, -77.5], 12);
 var marker = L.marker([39.03, -77.5]).addTo(map);
@@ -18,7 +15,6 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
 const updateMap = (update_map) => {
   map.setView(update_map, 12);
   L.marker(update_map).addTo(map);
-  console.log(update_map)
 }
 
 
@@ -30,15 +26,19 @@ input.addEventListener("keyup", function(event) {
 
 const searchInput = () => {
   let query = document.getElementById("search").value;
-  fetch(`http://ip-api.com/json/${query}?fields=status,region,city,zip,lat,lon,timezone,isp,query`)
+  if (query === ""){
+    query = "check";
+  }
+  fetch(`https://api.getgeoapi.com/v2/ip/${query}?api_key=3931a91ca81fb754455e445ca9f4bf66879fa0f5&format=json`)
   .then(response => response.json())
   .then(data => {
-  currentIpAddress.innerHTML = data.query
-  currentLocation.innerHTML = data.city + ', ' + data.region + ' ' + data.zip
-  currentISP.innerHTML = data.isp
-  currentTimezone.innerHTML = data.timezone.replace("_", " ");
+  console.log(data);
+  currentIpAddress.innerHTML = data.ip
+  currentLocation.innerHTML = data.city.name + ', ' + data.area.name + ' ' + data.postcode
+  currentCountry.innerHTML = data.country.flag.emoji
+  currentTimezone.innerHTML = data.time.code
   
-  updateMap([parseFloat(data.lat), parseFloat(data.lon)]);
+  updateMap([parseFloat(data.location.latitude), parseFloat(data.location.longitude)]);
 });
 };
 
